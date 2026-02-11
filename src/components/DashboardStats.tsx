@@ -48,14 +48,15 @@ export function DashboardStats({ areas, processosGerais }: DashboardProps) {
         </div>
 
         {/* Card: Nível de Automação (Destaque) */}
-        <div className="bg-brand-primary dark:bg-indigo-600 p-6 rounded-2xl shadow-lg dark:shadow-indigo-900/20 flex items-center gap-4 text-white transition-all hover:scale-[1.02] relative overflow-hidden group">
+        {/* Card: Nível de Automação (Fixado com visual Dark para contraste) */}
+        <div className="bg-indigo-600 p-6 rounded-2xl shadow-lg shadow-indigo-900/20 flex items-center gap-4 text-white transition-all hover:scale-[1.02] relative overflow-hidden group">
           <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity" />
           <div className="bg-white/20 p-3 rounded-xl backdrop-blur-sm">
             <Cpu size={24} />
           </div>
           <div className="relative z-10">
             <p className="text-sm text-white/80 font-medium">Nível de Automação</p>
-            <p className="text-2xl font-bold">{nivelAutomacao}%</p>
+            <p className="text-2xl font-bold text-white">{nivelAutomacao}%</p>
           </div>
         </div>
       </div>
